@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coming Soon</title>
+
+    <link rel="stylesheet" href="./node_modules/animate.css/animate.min.css">
+    <link rel="stylesheet" href="css/style.min.css">
+</head>
+<body>
+    <div class="bg-cover bgcover-img3" style="height: 70vh; width: 100%">
+        <h1 class="text-center pb-2 spacingtop-6 fw-bold font-poppins fs-sm-1 size-sm-h1 text-gradient">We are <br> Coming Soon</h1>
+
+        <p class="text-center font-poppins">We're currently working hard on this page. <br> Subscribe our newsletter to get update when it'll be live.</p>
+
+        <p class="fs-1 pt-5 fw-bold font-poppins ws-md-30 container d-flex justify-content-between text-center">
+            <span id="D"></span>
+            <span id="H"></span>
+            <span id="M"></span>
+            <span id="S"></span>
+        </p>
+
+        <h1 class="text-center size-h1 pt-3 text-white">Coming Soon</h1>
+
+        <div class="objectimg1 bgcover-img1 d-none d-sm-inline animate__animated animate__fadeInDown"></div>
+        <div class="objectimg2 bgcover-img2 d-none d-sm-inline animate__animated animate__fadeInDown"></div>
+
+    </div>
+
+    <form class="container">
+        <div class="py-5 font-pippins d-flex justify-content-center">
+            <input type="text" class="border-start border-0 px-5 py-3 w-30 d-block d-md-inline" placeholder="Your email address">
+            <button class="bg-white border-0">NOTIFY ME</button>
+        </div>
+    </form>
+    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="./node_modules/jquery-countdown/dist/jquery.countdown.min.js"></script>
+
+    <script>
+        $("#D").countdown('2021/11/10', function(event){
+            $(this).html(event.strftime('%D <span class="d-block fs-5">Days</span>'))
+            $("#H").html(event.strftime('%H <span class="d-block fs-5">Hours</span>'))
+            $("#M").html(event.strftime('%M <span class="d-block fs-5">Minutes</span>'))
+            $("#S").html(event.strftime('%S <span class="d-block fs-5">Seconds</span>'))
+        })
+    </script>
+
+</body>
+</html>

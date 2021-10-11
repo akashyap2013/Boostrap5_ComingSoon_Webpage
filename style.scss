@@ -1,0 +1,78 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins&display=swap');
+@import "./node_modules/bootstrap/scss/functions";
+@import "./node_modules/bootstrap/scss/variables";
+@import "./node_modules/bootstrap/scss/utilities";
+
+$utilities : (
+    "bgcover-img": (
+        property : background-image,
+        class : bgcover,
+        values : (
+            "img1" : url("../assets/img1.png"),
+            "img2" : url("../assets/img2.png"),
+            "img3" : url("../assets/img3.png"),
+        )
+    ),
+    "spacingtop": (
+        property : padding-top,
+        class : spacingtop,
+        values : (
+            6: 2em
+        )
+    ),
+    "fontSize": (
+        property : font-size,
+        class : size,
+        responsive: true,
+        values : (
+            h1: 5em
+        )
+    ),
+    "font-poppins": (
+        property : font-family,
+        class : font,
+        values : (
+            poppins: "Poppins"
+        )
+    ),
+    "ws": (
+        property : width,
+        class : ws,
+        responsive: true,
+        values : (
+            30: 30%
+        )
+    ),
+);
+
+
+@import "./node_modules/bootstrap/scss/bootstrap.scss";
+
+.text-gradient{
+     background: linear-gradient(to right,#b783ff,#b783ff,#fa7cc1,#ff85a6,#ff9393);
+     background-clip: text;
+     -webkit-background-clip: text;
+     -webkit-text-fill-color: transparent;
+     z-index: 99;
+}
+
+.objectimg1, .objectimg2{
+    background-size: cover;
+    background-repeat: no-repeat;
+    position: absolute;
+}
+
+.objectimg1{
+    width: 180px;
+    height: 180px;
+    top: 10%;
+    left: 15%;
+}
+
+.objectimg2{
+    width: 300px;
+    height: 250px;
+    top: 30%;
+    right: 15%;
+}
+
